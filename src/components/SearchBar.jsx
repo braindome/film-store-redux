@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import "./styles.css"
+import React, { useState } from "react";
+import "./styles.css";
 
-import SearchResult from './SearchResult';
+import SearchResult from "./SearchResult";
 
 const API_KEY = "973b4444";
 const BASE_URL = "http://www.omdbapi.com/?apikey=";
-const URL = `${BASE_URL}${API_KEY}`;
+export const URL = `${BASE_URL}${API_KEY}`;
 const TITLE_SEARCH_PARAM = "&s="; // https://www.omdbapi.com/ API parameters
 
 console.log(`API URL: ${URL}`);
 
-const SearchBar = ({onFilmData}) => {
+const SearchBar = ({ onFilmData }) => {
   const [title, setTitle] = useState("");
   const [filmData, setFilmData] = useState(null);
 
@@ -30,7 +30,7 @@ const SearchBar = ({onFilmData}) => {
   };
 
   return (
-    <div className='search_bar'>
+    <div className="search_bar">
       <h1>Film Hound</h1>
       <input type="text" value={title} onChange={handleInput} />
       <button onClick={getFilm}>Search</button>

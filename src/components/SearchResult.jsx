@@ -3,13 +3,6 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/action";
 
-const API_KEY = "973b4444";
-const BASE_URL = "http://www.omdbapi.com/?apikey=";
-const URL = `${BASE_URL}${API_KEY}`;
-const TITLE_SEARCH_PARAM = "&s="; // https://www.omdbapi.com/ API parameters
-
-console.log(`API URL: ${URL}`);
-
 const SearchResult = ({ filmData }) => {
 
   const dispatch = useDispatch();
@@ -17,7 +10,7 @@ const SearchResult = ({ filmData }) => {
   const handleBuy = (film) => {
     dispatch(addToCart(film));
   };
-  
+
   return (
     <div className="search_result">
       <h2>Search Results</h2>
@@ -33,6 +26,7 @@ const SearchResult = ({ filmData }) => {
                 <p>Type: {film.Type}</p>
                 <p>Year: {film.Year}</p>
                 <p>IMDB ID: {film.imdbID}</p>
+                <a href={`http://www.imdb.com/title/${film.imdbID}`}>IMDB Page</a>
               </div>
               <button onClick={() => handleBuy(film)}>Buy</button>
             </div>
