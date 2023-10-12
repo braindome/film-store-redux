@@ -1,0 +1,11 @@
+.cart_item {
+    border: solid yellow 2px;
+}
+
+.search_bar {
+    border: solid salmon 2px;
+}
+
+.search_result {
+    border: solid cyan 2px;
+}

@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.app_wrapper {
+  display: flex;
+  
+  border: solid green 2px;
+  padding: 20px;
+}
+
+.result_cart_wrapper {
+  border: solid gray 2px;
+}
+
+div {
+  padding: 20px;
+}
