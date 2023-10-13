@@ -6,6 +6,20 @@
     flex-direction: row;
     height: 200px;
     justify-content: space-between;
+    position: relative;
+}
+
+.cart_item button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    height: 40px;
+    background-color: gray;
+    color: black;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
 }
 
 .search_bar {
@@ -17,4 +31,8 @@
     border: solid cyan 2px;
     background-color: cyan;
     color: black;
+}
+
+ul {
+    list-style-type: none;
 }

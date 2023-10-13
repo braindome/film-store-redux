@@ -4,3 +4,10 @@ export const addToCart = (film) => {
     payload: film,
   };
 };
+
+export const removeFromCart = (film) => {
+  return {
+    type: "REMOVE_FROM_CART",
+    payload: film,
+  };
+};
