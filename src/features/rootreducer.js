@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import cartReducer from "./cartReducer";
 import { userReducer } from "./userReducer";
+import { filmReducer } from "./filmReducer";
 
 const rootReducer = combineReducers({
-  cart: cartReducer,
+  film: filmReducer,
   user: userReducer,
 });
 

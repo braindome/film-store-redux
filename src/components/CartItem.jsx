@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles.css"
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "../features/action";
+import { actions } from "../features/filmReducer";
 
 const CartItem = ({film}) => {
   const dispatch = useDispatch();
 
   const handleRemoveFromCart = () => {
-    dispatch(removeFromCart(film));
+    dispatch(actions.removeFromCart(film));
   }
 
   return (

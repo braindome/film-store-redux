@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./styles.css";
 import { useDispatch } from "react-redux";
 import { actions } from "../features/userReducer"
+import { actions as filmActions } from "../features/filmReducer";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const cartItems = useSelector((state) => state.cart);
+  const cartItems = useSelector((state) => state.film);
 
   const dispatch = useDispatch();
 

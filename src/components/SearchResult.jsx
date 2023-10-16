@@ -1,24 +1,14 @@
 import React, { useEffect } from "react";
-// import { calculatePrice } from "../features/priceReducer";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../features/action";
+import { actions } from "../features/filmReducer";
 
 const SearchResult = ({ filmData }) => {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   if (filmData) {
-  //     filmData.Search.forEach((film) => {
-  //       if (film.Year) {
-  //         dispatch(calculatePrice(film.Year))
-  //       }
-  //     })
-  //   }
-  // }, [dispatch, filmData])
-
   const handleBuy = (film) => {
-    dispatch(addToCart(film));
+    console.log(film)
+    dispatch(actions.addToCart(film));
   };
 
   return (
