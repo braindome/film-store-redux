@@ -4,6 +4,9 @@ import CartItem from "./CartItem";
 
 const ShoppingCart = () => {
   const cartItems = useSelector((state) => state.cart);
+  const userEmail = useSelector((state) => state.user.email);
+
+  console.log("email " + userEmail);
 
   return (
     <div className="cart_wrapper">
@@ -11,6 +14,10 @@ const ShoppingCart = () => {
       {cartItems.map((film, index) => (
         <CartItem key={index} film={film} />
       ))}
+      <div>
+        <h3> {userEmail} </h3>
+        <button >Checkout</button>
+      </div>
     </div>
   );
 };

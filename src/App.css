@@ -8,9 +8,15 @@
 
 .app_wrapper {
   display: flex;
-  
+  flex-direction: column;
   border: solid green 2px;
   padding: 20px;
+}
+
+.inner_wrapper {
+  display: flex;
+  flex-direction: row;
+  
 }
 
 .result_cart_wrapper {

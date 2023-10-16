@@ -1,3 +1,11 @@
+.navbar {
+    display: flex;
+}
+
+.login {
+    border: 2px solid blueviolet;
+}
+
 .cart_item {
     border: solid yellow 2px;
     background-color: yellow;
