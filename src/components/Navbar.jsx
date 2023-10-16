@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./styles.css";
 import { useDispatch } from "react-redux";
 import { actions } from "../features/userReducer"
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const cartItems = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
 
@@ -23,10 +25,10 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Logo</div>
       <div className="search">
         <input type="text" placeholder="Search" />
         <button>Search</button>
+        <h3>Items in cart: {cartItems.length}</h3>
       </div>
       <div className="login">
         {loggedIn ? (

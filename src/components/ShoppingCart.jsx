@@ -6,7 +6,7 @@ const ShoppingCart = () => {
   const cartItems = useSelector((state) => state.cart);
   const userEmail = useSelector((state) => state.user.email);
 
-  console.log("email " + userEmail);
+  console.log("items in cart: " + cartItems.length);
 
   return (
     <div className="cart_wrapper">
